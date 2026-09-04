@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skinet.WebAPI", "src\Skinet
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skinet.Domain", "src\Skinet.Domain\Skinet.Domain.csproj", "{1671BFA2-2039-4D7B-8A48-F756CFE40994}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skinet.Core", "src\Skinet.Domain\Skinet.Core.csproj", "{1671BFA2-2039-4D7B-8A48-F756CFE40994}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Skinet.Infrastructure", "src\Skinet.Infrastructure\Skinet.Infrastructure.csproj", "{F41B6865-8ABD-4461-A45F-6B93E3D0E96E}"
 EndProject
