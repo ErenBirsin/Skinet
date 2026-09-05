@@ -1,11 +1,13 @@
-﻿using Skinet.Domain.Entities;
+﻿using Skinet.Core.Entities;
 
 namespace Skinet.Core.Interfaces
 {
     public interface IProductRepository
     {
-        Task<IReadOnlyList<Product>> GetProductAsync();
+        Task<IReadOnlyList<Product>> GetProductsAsync(string? brand, string? type, string? sort);
         Task<Product?> GetProductByIdAsync(int id);
+        Task<IReadOnlyList<string>> GetBrandAsync();
+        Task<IReadOnlyList<string>> GetTypeAsync();
         void AddProduct(Product product);
         void UpdateProduct(Product product);
         void DeleteProduct(Product product);

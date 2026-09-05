@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Skinet.Domain.Entities;
+using Skinet.Core.Entities;
 using Skinet.Infrastructure.Config;
 
 namespace Skinet.Infrastructure.Data;

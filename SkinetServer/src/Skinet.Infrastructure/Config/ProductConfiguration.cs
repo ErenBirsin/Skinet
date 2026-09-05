@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using Skinet.Domain.Entities;
+using Skinet.Core.Entities;
 
 namespace Skinet.Infrastructure.Config
 {
