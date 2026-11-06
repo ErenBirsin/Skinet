@@ -1,4 +1,6 @@
-﻿using System.Linq.Expressions;
+﻿using Skinet.Core;
+using Skinet.Core.Specifications;
+using System.Linq.Expressions;
 
 namespace Skinet.Core.Specifications
 {
@@ -13,6 +15,8 @@ namespace Skinet.Core.Specifications
         public Expression<Func<T, object>>? OrderBy { get; private set; }
         public Expression<Func<T, object>>? OrderByDescending { get; private set; }
 
+        public bool IsDistinct  {get;private set;}
+
         protected void AddOrderBy(Expression<Func<T, object>> orderByExpression)
         {
             OrderBy = orderByExpression;
@@ -22,5 +26,26 @@ namespace Skinet.Core.Specifications
         {
             OrderByDescending = orderByDescExpression;
         }
+
+        protected void ApplyDistinct()
+        {
+            IsDistinct = true;
+        }
+    }
+}
+
+public class BaseSpecification<T, TResult>(Expression<Func<T, bool>> criteria)
+    : BaseSpecification<T>(criteria), ISpecification<T, TResult>
+
+{
+    protected BaseSpecification() : this(null!)
+    {
+
+    }
+    public Expression<Func<T, TResult>>? Select  { get; private set; }
+
+    protected void AddSelect(Expression<Func<T, TResult>> selectExpression)
+    {
+        Select = selectExpression;
     }
 }
