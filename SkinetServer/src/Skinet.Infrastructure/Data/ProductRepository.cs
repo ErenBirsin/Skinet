@@ -42,7 +42,7 @@ namespace Skinet.Infrastructure.Data
                 _ => query.OrderBy(p => p.Name)
             };
 
-            return await query.ToListAsync();
+            return await query.Skip(5).Take(5).ToListAsync();
         }
 
         public async Task<Product?> GetProductByIdAsync(int id)
