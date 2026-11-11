@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using Skinet.Core.Interfaces;
 using Skinet.Infrastructure.Data;
 using Skinet.Infrastructure.Data.SeedData;
+using Skinet.WebAPI.Middleware;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,7 @@ if (app.Environment.IsDevelopment())
     app.MapOpenApi();
 }
 
-
+app.UseMiddleware<ExceptionMiddleware>();
 app.MapControllers();
 
 try
